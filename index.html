@@ -131,7 +131,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(rgba(13, 59, 102, 0.85), rgba(13, 59, 102, 0.85)),
+            background: linear-gradient(rgba(13, 59, 102, 0.9), rgba(13, 59, 102, 0.9)),
                         url('https://images.pexels.com/photos/1263426/pexels-photo-1263426.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1') center/cover no-repeat;
             color: white;
             padding: 2rem;
@@ -153,13 +153,23 @@
         .hero h1 {
             color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-intro {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
         }
 
         .hero-subtitle {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            color: #e0e0e0;
-            line-height: 1.6;
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            color: #ffc300; /* Cor de destaque */
+            line-height: 1.4;
+            font-weight: 600;
         }
 
         .hero-mockup {
@@ -171,7 +181,7 @@
         .hero-mockup img {
             box-shadow: var(--sombra-forte);
             border-radius: 8px;
-            max-width: 350px; /* Ajuste para melhor visualização da capa */
+            max-width: 400px;
         }
 
         /* ========================================
@@ -327,7 +337,7 @@
 
         .beneficio-card:hover {
             transform: translateY(-10px);
-            box-shadow: var(--sombra-forte);
+            box-shadow: var(--sombra-strong);
         }
 
         .beneficio-icon {
@@ -339,10 +349,6 @@
         .beneficio-card h3 {
             color: var(--cor-primaria);
             margin-bottom: 1rem;
-        }
-
-        .beneficio-card p {
-            color: var(--cor-texto-claro);
         }
 
         /* ========================================
@@ -358,12 +364,11 @@
 
         .conteudo-box {
             background: white;
-            max-width: 800px;
-            margin: 2rem auto;
             padding: 3rem;
             border-radius: 15px;
-            box-shadow: var(--sombra-forte);
-            border: 3px solid var(--cor-secundaria);
+            box-shadow: var(--sombra);
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .conteudo-lista {
@@ -372,18 +377,15 @@
 
         .conteudo-lista li {
             font-size: 1.2rem;
-            margin-bottom: 1.2rem;
-            display: flex;
-            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+            position: relative;
         }
 
         .conteudo-lista li::before {
-            content: "🏐";
-            margin-right: 1rem;
-        }
-
-        .conteudo-lista li:last-child {
-            margin-bottom: 0;
+            content: "🎁";
+            position: absolute;
+            left: 0;
         }
 
         /* ========================================
@@ -400,35 +402,33 @@
         }
 
         .preco-box {
-            background: white;
-            color: var(--cor-texto);
-            max-width: 500px;
-            margin: 3rem auto 0;
-            padding: 4rem 3rem;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4rem 2rem;
             border-radius: 20px;
-            box-shadow: var(--sombra-forte);
-            position: relative;
+            border: 2px dashed var(--cor-destaque);
+            max-width: 600px;
+            margin: 3rem auto 0;
         }
 
         .preco-antigo {
             text-decoration: line-through;
-            color: var(--cor-texto-claro);
-            font-size: 1.4rem;
+            font-size: 1.5rem;
+            color: #ff8c42;
             margin-bottom: 0.5rem;
         }
 
         .preco-atual {
-            font-size: 4rem;
+            font-size: 4.5rem;
             font-weight: 800;
-            color: var(--cor-primaria);
-            margin-bottom: 1.5rem;
+            color: var(--cor-destaque);
+            line-height: 1;
+            margin-bottom: 1rem;
         }
 
         .preco-destaque {
+            font-size: 1.2rem;
             font-weight: 600;
-            color: var(--cor-secundaria);
             margin-bottom: 2.5rem;
-            font-size: 1.1rem;
         }
 
         /* ========================================
@@ -436,6 +436,7 @@
         ======================================== */
         .garantia {
             background: white;
+            text-align: center;
         }
 
         .garantia h2 {
@@ -443,27 +444,22 @@
         }
 
         .garantia-box {
-            max-width: 900px;
-            margin: 3rem auto 0;
-            background: #f0f7ff;
-            padding: 4rem;
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            border: 2px dashed var(--cor-primaria);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem;
+            background: var(--cor-fundo);
+            border-radius: 15px;
+            border: 1px solid #ddd;
         }
 
         .garantia-selo {
             font-size: 5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .garantia-texto {
             font-size: 1.2rem;
             color: var(--cor-texto);
-            max-width: 700px;
         }
 
         /* ========================================
@@ -471,34 +467,36 @@
         ======================================== */
         footer {
             background: #111;
-            color: #ccc;
+            color: #999;
             padding: 4rem 2rem;
             text-align: center;
         }
 
-        footer p {
+        footer strong {
+            color: white;
+            font-size: 1.2rem;
+            display: block;
             margin-bottom: 1rem;
         }
 
         .footer-aviso {
-            font-size: 0.85rem;
-            max-width: 800px;
-            margin: 2rem auto 0;
-            padding-top: 2rem;
-            border-top: 1px solid #333;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* ========================================
            RESPONSIVIDADE
         ======================================== */
-        @media (max-width: 992px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
+        @media (max-width: 1024px) {
             h1 {
                 font-size: 2.2rem;
+            }
+
+            .hero-container {
+                gap: 2rem;
             }
 
             .hero-mockup {
@@ -547,7 +545,7 @@
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 1.6rem;
+                font-size: 1.8rem;
             }
 
             .hero-subtitle {
@@ -572,17 +570,16 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1>Chega de perder noites! Economize horas de planejamento com 100 aulas de vôlei prontas para aplicar.</h1>
+                <p class="hero-intro">Professor de Educação Física,</p>
+                <h1>Pare de começar do zero toda semana.</h1>
                 <p class="hero-subtitle">
-                    Tenha em mãos um material completo, organizado e validado, que transforma seu tempo livre em qualidade de vida e suas aulas em um sucesso instantâneo.
+                    Tenha 100 aulas de vôlei estruturadas, com objetivo, materiais e passo a passo detalhado.
                 </p>
                 <a href="https://pay.cakto.com.br/vqca5rh_767670" class="btn-cta" id="cta1">
-                    <!-- COLOCAR AQUI O LINK DO CHECKOUT DA CAKTO -->
                     Quero Minhas Aulas Prontas Agora!
                 </a>
             </div>
             <div class="hero-mockup">
-                <!-- Imagem da capa do produto inserida conforme solicitado -->
                 <img src="capaproduto1.png" alt="">
             </div>
         </div>
@@ -706,8 +703,6 @@
                     <li><strong>Garantia de 7 dias:</strong> Sua satisfação ou seu dinheiro de volta!</li>
                 </ul>
             </div>
-
-            <!-- Seção 'Exemplo do conteúdo do PDF' removida conforme solicitado -->
         </div>
     </section>
 
@@ -726,7 +721,6 @@
                 </p>
                 
                 <a href="https://pay.cakto.com.br/vqca5rh_767670" class="btn-cta" id="cta2">
-                    <!-- INSERIR LINK DO CHECKOUT AQUI -->
                     Sim! Quero Minhas Aulas Prontas Agora!
                 </a>
             </div>
@@ -751,7 +745,6 @@
                 </p>
                 
                 <a href="https://pay.cakto.com.br/vqca5rh_767670" class="btn-cta" id="cta3" style="margin-top: 2rem;">
-                    <!-- INSERIR LINK DO CHECKOUT AQUI -->
                     Garantir minhas aulas agora
                 </a>
             </div>
